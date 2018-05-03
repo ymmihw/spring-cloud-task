@@ -25,7 +25,6 @@ public class TaskDemo {
 
     @Override
     public void run(ApplicationArguments arg0) throws Exception {
-      // TODO Auto-generated method stub
       LOGGER.info("Hello World from Spring Cloud Task!");
     }
   }

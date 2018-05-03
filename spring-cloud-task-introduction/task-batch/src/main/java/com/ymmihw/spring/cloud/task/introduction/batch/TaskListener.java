@@ -12,19 +12,16 @@ public class TaskListener implements TaskExecutionListener {
 
   @Override
   public void onTaskEnd(TaskExecution arg0) {
-    // TODO Auto-generated method stub
     LOGGER.info("End of Task");
   }
 
   @Override
   public void onTaskFailed(TaskExecution arg0, Throwable arg1) {
-    // TODO Auto-generated method stub
-
+    LOGGER.info("Task Failed");
   }
 
   @Override
   public void onTaskStartup(TaskExecution arg0) {
-    // TODO Auto-generated method stub
     LOGGER.info("Task Startup");
   }
 }
