@@ -32,19 +32,20 @@ public class SpringCloudTaskSinkApplicationTests {
   @Test
   public void testTaskLaunch() throws IOException {
 
-    TaskLauncher taskLauncher = context.getBean(TaskLauncher.class);
+    
 
-    Map<String, String> prop = new HashMap<String, String>();
+    Map<String, String> prop = new HashMap<>();
     prop.put("server.port", "0");
     TaskLaunchRequest request = new TaskLaunchRequest(
         "maven://org.springframework.cloud.task.app:" + "timestamp-task:jar:1.0.1.RELEASE", null,
         prop, null, null);
-    GenericMessage<TaskLaunchRequest> message = new GenericMessage<TaskLaunchRequest>(request);
+    GenericMessage<TaskLaunchRequest> message = new GenericMessage<>(request);
     this.sink.input().send(message);
 
     ArgumentCaptor<AppDeploymentRequest> deploymentRequest =
         ArgumentCaptor.forClass(AppDeploymentRequest.class);
 
+    TaskLauncher taskLauncher = context.getBean(TaskLauncher.class);
     verify(taskLauncher).launch(deploymentRequest.capture());
 
     AppDeploymentRequest actualRequest = deploymentRequest.getValue();
