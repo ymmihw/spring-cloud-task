@@ -1,7 +1,6 @@
 package com.ymmihw.spring.cloud.task.introduction.batch;
 
 import java.util.logging.Logger;
-import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
@@ -11,7 +10,6 @@ import org.springframework.stereotype.Component;
 
 @SpringBootApplication
 @EnableTask
-@EnableBatchProcessing
 public class TaskDemo {
 
   private final static Logger LOGGER = Logger.getLogger(TaskDemo.class.getName());

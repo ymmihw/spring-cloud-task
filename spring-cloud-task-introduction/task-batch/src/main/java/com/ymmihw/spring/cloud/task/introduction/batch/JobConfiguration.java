@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.StepContribution;
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.core.scope.context.ChunkContext;
@@ -19,6 +20,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@EnableBatchProcessing
 public class JobConfiguration {
 
   private final static Logger LOGGER = Logger.getLogger(JobConfiguration.class.getName());
