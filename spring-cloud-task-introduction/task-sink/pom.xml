@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <modelVersion>4.0.0</modelVersion>
+ <parent>
+  <groupId>com.ymmihw.spring.cloud.task</groupId>
+  <artifactId>spring-cloud-task-introduction</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+ </parent>
+ <groupId>com.ymmihw.cloud.task.introduction</groupId>
+ <artifactId>task-sink</artifactId>
+ <version>0.0.1-SNAPSHOT</version>
+ <name>task-sink</name>
+ <url>http://maven.apache.org</url>
+ <properties>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+ </properties>
+ <dependencies>
+  <dependency>
+   <groupId>org.springframework.cloud</groupId>
+   <artifactId>spring-cloud-starter-task</artifactId>
+  </dependency>
+  <dependency>
+   <groupId>org.mockito</groupId>
+   <artifactId>mockito-core</artifactId>
+  </dependency>
+  <dependency>
+   <groupId>org.springframework.cloud</groupId>
+   <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+  </dependency>
+  <dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-test</artifactId>
+   <scope>test</scope>
+  </dependency>
+ </dependencies>
+</project>
